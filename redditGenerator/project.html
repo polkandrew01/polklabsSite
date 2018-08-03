@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-<title>PolkLabs: Pixel Game</title>
+<title>PolkLabs: Coming soon</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Limelight">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../polklabs.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
@@ -22,16 +23,12 @@ body, html {
 .menu {
     display: none;
 }
-
-/* list bullet point */
-ul.a { list-style-type: square; }
-ul.b { list-style-type: circle; }
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-light-grey w3-wide w3-padding w3-card">
+  <div class="w3-bar w3-theme-l4 w3-wide w3-padding w3-card">
     <a href="../index.html" class="w3-bar-item w3-button"><b>PolkLabs</b> Engineering</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
@@ -42,144 +39,20 @@ ul.b { list-style-type: circle; }
   </div>
 </div>
 
-<!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-	<div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-		<span class="w3-tag">UCSB ECE153b project</span>
-	</div>
-	<div class="w3-display-middle w3-center">
-		<span class="w3-tag w3-text-white w3-jumbo" style="font-family:'Limelight', cursive">Pixel<br>Game</span>
-	</div>
-	<div class="w3-display-bottomright w3-center w3-padding-large">
-		<span class="w3-tag">By Andrew Polk</span>
-	</div>
-</header>
-
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-white w3-large w3-main w3-content" style="max-width:1600px">
 
-	<!-- About Container -->
-	<div class="w3-container" id="about">
-	  <div class="w3-content">
-		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">ABOUT The Pixel Game</h2>
-		<p>The goal of this project was to implement a RGB-Matrix with the LPC4088 chip to create a simple pixel game. This game uses the NXP LPCxpresso development board to interface the RGB display.</p>
-		
-		<div class="w3-center">
-			<button onclick="location.href=''" type="button" class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-				<i class="fa fa-spinner w3-margin-right"></i>In Action
-			</button>
-			<button onclick="location.href='https://github.com/polkandrew01/LPC4088-RGB-Matrix'" type="button" class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-				<i class="fa fa-github w3-margin-right"></i>The Repo
-			</button>
-		</div>
-		
-		<div style="text-align:center">
-			<h5><b>Contributors:</b></h5>
-			<div class="w3-small">
-					Andrew Polk (Display Implementation, Game design)</br>
-					Victoria Sneddon (Game design, Game code)</br>
-			</div>
-		</div>
-		<p>March 2018, We are two third year computer engineering majors at UCSB. </p>
-		<p><strong>School:</strong> UC Santa Barbara</p>
-		<p><strong>Class:</strong> Sensor and peripheral design</p>
-	  </div>
-	</div>
-
-	<!-- How It Works Container -->
-	<div class="w3-container" id="how">
-	  <div class="w3-content">
-		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">HOW IT WORKS</h2>
-		<p>The goal of thr statistical model. We also implemented a rudimentary algorithm that allows the model to learn and improve from past predictions.</p>
-		<p>The main program takes in a name of a movie from the user. It then downloads the ID's of the actors and other parameters from TheMovieDB.org. Those ID's are then compared against the previous ratings of movies those actors have starred in. The final resulting list of ratings is then averaged and weighted together to form the final rating guess.</p>
-		<p><strong>Parts:</strong> Adafruit RGB-Matrix, Joystick, Pezo Speaker</p>
-		<p><strong>Languages:</strong> C</p>
-		<h5><b>The Finished Product:</b></h5>
-		<p style="text-align:center"><img src="https://cdn-shop.adafruit.com/970x728/420-05.jpg" alt="Complete" style="width:100%;max-width:700px;" class="w3-margin-top"></p>
-		<p style="text-align:center"><img src="https://cdn-shop.adafruit.com/970x728/420-04.jpg" alt="complete GIF" style="width:50%;max-width:700px;" class="w3-margin-top"></p>
-	  </div>
-	</div>
-
-	<!-- Menu Container -->
-	<div class="w3-container" id="menu">
-	  <div class="w3-content" style="max-width:700px">
-		
-		<h2 class="w3-center w3-padding-64" id="result"><span class="w3-wide">THE RESULTS</span></h2>
-	  
-		<div class="w3-row w3-center w3-card w3-padding">
-		  <a href="javascript:void(0)" onclick="openMenu(event, 'One');" id="myLink">
-			<div class="w3-col s6 tablink">The Display</div>
-		  </a>
-		  <a href="javascript:void(0)" onclick="openMenu(event, 'Two');">
-			<div class="w3-col s6 tablink">The Game</div>
-		  </a>
-		</div>
-
-		<div id="One" class="w3-container menu w3-padding-48 w3-card">
-		  <img src="pinouts.png" alt="Board Pins" style="width:100%">
-		  <p class="w3-text-grey">The used pins of the LPC expansion connectors</p><br>
-		
-		  <img src="https://cdn-learn.adafruit.com/assets/assets/000/023/826/medium640/led_matrix_plug2.png?1426392350" alt="Display Pins" style="width:100%">
-		  <p class="w3-text-grey">The pinouts for the display connector</p><br>
-		
-		  <img src="Genre.png" alt="Genre Correlation" style="width:100%">
-		  <p class="w3-text-grey">The correlation of genre to actual ratings</p><br>
-		
-		  <img src="Producers.png" alt="Producer Correlation" style="width:100%">
-		  <p class="w3-text-grey">The correlation of producers company to actual ratings</p><br>
-		
-		  <img src="Directors.png" alt="Director Correlation" style="width:100%">
-		  <p class="w3-text-grey">The correlation of the director to actual ratings</p><br>
-		  
-		  <img src="Writers.png" alt="Writer Correlation" style="width:100%">
-		  <p class="w3-text-grey">The correlation of writers to actual ratings</p><br>
-		  
-		  <img src="Year.png" alt="Year Correlation" style="width:100%">
-		  <p class="w3-text-grey">The correlation of release year to actual ratings</p><br>
-		</div>
-
-		<div id="Two" class="w3-container menu w3-padding-48 w3-card">
-		  <h5>Company</h5>
-		  <p class="w3-text-grey">The average ratings of companies had the highest correlation of ratings to the actual rating</p><br>
-		
-		  <h5>Actor</h5>
-		  <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-		
-		  <h5>Genre</h5>
-		  <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-		
-		  <h5>Producer</h5>
-		  <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-		
-		  <h5>Director</h5>
-		  <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-		</div>  
-		<img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
-	  </div>
+	<div class="w3-display-middle">
+		<h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+		<hr class="w3-border-grey" style="margin:auto;width:40%">
+		<p class="w3-large w3-center" id="countdown">2018</p>
 	</div>
 
 	<!-- End page content -->
 	</div>
 
+	
 <div class="w3-dark-grey w3-center w3-padding-16">Powered by <a href="https://www.polklabs.com" title="POLKLABS.COM" target="_blank" class="w3-hover-opacity">PolkLabs.com</a></div>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-</script>
 
 </body>
 </html>
