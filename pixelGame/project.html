@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<title>PolkLabs: Pixel Game</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Limelight">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    font-family: "Raleway", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("LED-matrix.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+
+/* list bullet point */
+ul.a { list-style-type: square; }
+ul.b { list-style-type: circle; }
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-light-grey w3-wide w3-padding w3-card">
+    <a href="../index.html" class="w3-bar-item w3-button"><b>PolkLabs</b> Engineering</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">What</a>
+      <a href="#how" class="w3-bar-item w3-button">How</a>
+      <a href="#result" class="w3-bar-item w3-button">Results</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+	<div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+		<span class="w3-tag">UCSB ECE153b project</span>
+	</div>
+	<div class="w3-display-middle w3-center">
+		<span class="w3-tag w3-text-white w3-jumbo" style="font-family:'Limelight', cursive">Pixel<br>Game</span>
+	</div>
+	<div class="w3-display-bottomright w3-center w3-padding-large">
+		<span class="w3-tag">By Andrew Polk</span>
+	</div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-white w3-large w3-main w3-content" style="max-width:1600px">
+
+	<!-- About Container -->
+	<div class="w3-container" id="about">
+	  <div class="w3-content">
+		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">ABOUT The Pixel Game</h2>
+		<p>The goal of this project was to implement a RGB-Matrix with the LPC4088 chip to create a simple pixel game. This game uses the NXP LPCxpresso development board to interface the RGB display.</p>
+		
+		<div class="w3-center">
+			<button onclick="location.href=''" type="button" class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+				<i class="fa fa-spinner w3-margin-right"></i>In Action
+			</button>
+			<button onclick="location.href='https://github.com/polkandrew01/LPC4088-RGB-Matrix'" type="button" class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+				<i class="fa fa-github w3-margin-right"></i>The Repo
+			</button>
+		</div>
+		
+		<div style="text-align:center">
+			<h5><b>Contributors:</b></h5>
+			<div class="w3-small">
+					Andrew Polk (Display Implementation, Game design)</br>
+					Victoria Sneddon (Game design, Game code)</br>
+			</div>
+		</div>
+		<p>March 2018, We are two third year computer engineering majors at UCSB. </p>
+		<p><strong>School:</strong> UC Santa Barbara</p>
+		<p><strong>Class:</strong> Sensor and peripheral design</p>
+	  </div>
+	</div>
+
+	<!-- How It Works Container -->
+	<div class="w3-container" id="how">
+	  <div class="w3-content">
+		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">HOW IT WORKS</h2>
+		<p>This project contains a custom spi based protocol to interface with the RGB matrix. Along with the RGB matrix there is a speaker that loops through playing the Tetris and Doctor Mario theme. This speaker interface uses code ported from a Tetris song arduino project. The game all runs around the LPC's button interrupts and it's timer interrupts to run the designed game.</p>
+		<p>The game is a connect four falling dot game. When the game starts the board is already fill 60% with different colored dots. Three random colored dots are then dropped from the top of the display, it is up to the player to line the dots up with other dots to make them dissapear. The dots can be connect horizontal, vertical, or diagonally. The game is won when all the dots are cleared from the board and lost when a dot lands on the top row of the matrix. The game is then restartes after a win or a loss and is also able to be paused at anytime.</p>
+		<p><strong>Parts:</strong> Adafruit RGB-Matrix, Joystick, Pezo Speaker</p>
+		<p><strong>Languages:</strong> C</p>
+		<h5><b>The Finished Product:</b></h5>
+		<p style="text-align:center"><img src="https://cdn-shop.adafruit.com/970x728/420-05.jpg" alt="Complete" style="width:100%;max-width:700px;" class="w3-margin-top"></p>
+		<p style="text-align:center"><img src="running.gif" alt="complete GIF" style="width:50%;max-width:700px;" class="w3-margin-top"></p>
+	  </div>
+	</div>
+
+	<!-- Menu Container -->
+	<div class="w3-container" id="menu">
+	  <div class="w3-content" style="max-width:700px">
+		
+		<h2 class="w3-center w3-padding-64" id="result"><span class="w3-wide">THE RESULTS</span></h2>
+	  
+		<div class="w3-row w3-center w3-card w3-padding">
+		  <a href="javascript:void(0)" onclick="openMenu(event, 'One');" id="myLink">
+			<div class="w3-col s6 tablink">The Display</div>
+		  </a>
+		  <a href="javascript:void(0)" onclick="openMenu(event, 'Two');">
+			<div class="w3-col s6 tablink">The Game</div>
+		  </a>
+		</div>
+
+		<div id="One" class="w3-container menu w3-padding-48 w3-card">
+		  <img src="pinouts.png" alt="Board Pins" style="width:100%">
+		  <p class="w3-text-grey">The used pins of the LPC expansion connectors</p><br>
+		
+		  <img src="https://cdn-learn.adafruit.com/assets/assets/000/023/826/medium640/led_matrix_plug2.png?1426392350" alt="Display Pins" style="width:100%">
+		  <p class="w3-text-grey">The pinouts for the display connector</p><br>
+		
+		  <h5>Pin choices</h5>
+		  <p class="w3-text-grey">The pins on the LPC board were chosen from pins that were able to be assigned to and pins that were not already being used by the user buttons. There was also some trial and error with finding pins that worked correctly even if they met the requirements.</p><br>
+		
+		  <h5>Speaker</h5>
+		  <p class="w3-text-grey">The speaker had it's own dedicated pin connection but was connected throught the expansion slot as the dedicated pin did not work on our board.</p><br>
+		</div>
+
+		<div id="Two" class="w3-container menu w3-padding-48 w3-card">
+		  <h5>Controls</h5>
+		  <p class="w3-text-grey">The game is controled with the joy stick. Left and right move the dot left and right. Up pauses the game and down moved the dots down faster.</p><br>
+		
+		  <h5>Winning</h5>
+		  <p class="w3-text-grey">The game is won when all dots are cleared from the board.</p><br>
+		  
+		  <h5>Losing</h5>
+		  <p class="w3-text-grey">The game is lost when a dot is placed on the top row of the matrix</p><br>
+		  
+		  <h5>Playing</h5>
+		  <p class="w3-text-grey">The colored dots need to be lines up with four other dots of the same color to make them all dissapear. The dots can be connected horizontal, vertical, or diagonally.</p><br>
+		</div>  
+	  </div>
+	</div>
+
+	<!-- End page content -->
+	</div>
+
+<div class="w3-dark-grey w3-center w3-padding-16">Powered by <a href="https://www.polklabs.com" title="POLKLABS.COM" target="_blank" class="w3-hover-opacity">PolkLabs.com</a></div>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PolkLabs.com</title>
+	<meta name="thumbnail" content="images/Icon2.png">
+	<link rel="icon" type="image/x-icon" href="images/Icon2.png">	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="polklabs.css">
+	<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+	/* List bullet points */
+	ul.a { list-style-type: square; }
+	ul.b { list-style-type: circle; }
+
+	.pagination {display: inline-block;}
+	.pagination a {
+		color: black;
+		float: left;
+		padding: 8px, 16px;
+		text-decoration: none;
+	}
+	.pagination a.active {
+		background-color: #4CAF50;
+		color: white;
+	}
+	.pagination a:hover:not(.active) {background-color: #ddd;}
+	
+	.wrap {
+		width: 100%;
+	}
+	.floatleft {
+		float:left; 
+		width: 80%;
+		background-color: #ff0000;
+		height: 400px;
+	}
+	.floatright {
+	float: right;
+		background-color: #00ff00;
+		height: 400px;
+		width: 20%;
+	}
+	</style>
+</head>
+<body class="w3-white">
+
+	<!-- Navbar (sit on top) -->
+	<div class="w3-top">
+		<div class="w3-bar w3-theme-l4 w3-wide w3-padding w3-card">
+			<a href="#" class="w3-bar-item w3-button">PolkLabs Engineering</a>
+			<!-- Float links to the right. Hide them on small screens -->
+			<div class="w3-right w3-hide-small">
+				<a href="#projects" class="w3-bar-item w3-button">Projects</a>
+				<a href="#about" class="w3-bar-item w3-button">About</a>
+				<a href="#contact" class="w3-bar-item w3-button">Contact</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main w3-content" style="max-width:1200px">
+
+		<!-- Header -->
+		<header id="projects">
+			<div class="w3-container">
+				<!-- Project Section -->
+				</br></br>
+				<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align:center">Projects</h2>
+			</div>
+		</header>
+
+		<!-- Photo Grid-->
+		<div id="page1">
+			<!-- First Photo Grid-->
+			<div class="w3-row-padding">
+				<div class="w3-third w3-container w3-margin-bottom">
+					<img onclick="location.href='reelratings/project.html'" src="images/ReelRatings.png" alt="ReelRatings" style="width:100%" class="w3-hover-opacity">
+					<div class="w3-container w3-light-grey" style="height:100%">
+						<p><b>Reel Raings</b></p>
+						<p>A webapp that can predict the rating of a movie with the title entered by the user. The prediction relies on IMDb and TMDb datasets, using a statistical model.</p>
+						<p><i>Tags: <span class="w3-theme-d5">Data Science </span>, <span class="w3-theme-d5">Python </span>, <span class="w3-theme-d5">HTML </span></i></p>
+					</div>
+				</div>
+				<div class="w3-third w3-container w3-margin-bottom">
+					<img onclick="location.href='pixelGame/project.html'" src="images/LED-matrix.jpg" alt="LED Matrix" style="width:100%" class="w3-hover-opacity">
+					<div class="w3-container w3-light-grey">
+						<p><b>Pixel Matrix Game</b></p>
+						<p>A simple match four game on a 16x32 RGB matrix.</p>
+						<p><i>Tags: <span class="w3-theme-d5">C </span>, <span class="w3-theme-d5">LPCxpresso </span>, <span class="w3-theme-d5">RGB LED </span></i></p>
+					</div>
+				</div>
+				<div class="w3-third w3-container w3-margin-bottom">
+					<img onclick="location.href='redditGenerator/project.html'" src="images/index.png" alt="Reddit Img" style="width:100%" class="w3-hover-opacity">
+					<div class="w3-container w3-light-grey">
+						<p><b>Reddit Post Generator</b></p>
+						<p>A project that attempts to recreate reddit posts.</p>
+						<p><i>Tags: <span class="w3-theme-d5">Python </span>, <span class="w3-theme-d5">Reddit </span>, <span class="w3-theme-d5">NLP </span></i></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Second Photo Grid -->
+			<div class="w3-row-padding">
+				<div class="w3-third w3-container w3-margin-bottom">
+					<img onclick="location.href='chatRoomApp/project.html'" src="images/androidlogo.jpg" alt="Android" style="width:100%" class="w3-hover-opacity">
+					<div class="w3-container w3-light-grey">
+						<p><b>Android Chat Room Application</b></p>
+						<p>A simple android app that allows users to enter chat room and connect with others.</p>
+						<p><i>Tags: <span class="w3-theme-d5">Java </span>, <span class="w3-theme-d5">Android </span>, <span class="w3-theme-d5">Communication </span></i></p>
+					</div>
+				</div>
+				<div class="w3-third w3-container w3-margin-bottom">
+					<img onclick="location.href=''" src="images/coming-soon.png" alt="ComingSoon" style="width:100%" class="w3-hover-opacity">
+					<div class="w3-container w3-light-grey">
+						<p><b>Coming Soon</b></p>
+						<p>There's nothing here yet. Please come back later</p>
+					</div>
+				</div>
+				<div class="w3-third w3-container w3-margin-bottom">
+					<img onclick="location.href=''" src="images/coming-soon.png" alt="ComingSoon" style="width:100%" class="w3-hover-opacity">
+					<div class="w3-container w3-light-grey">
+						<p><b>Coming Soon</b></p>
+						<p>There's nothing here yet. Please come back later</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pagination -->
+		<div class="w3-center w3-padding-32">
+			<div class="w3-bar" id="PageNav">
+				<a id="Nav1" onclick="openPage(1)" class="w3-bar-item w3-black w3-button">1</a>
+			</div>
+		</div>
+
+		<!-- About Me -->
+		<div id="about">
+			<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align:center">About Me</h2>
+			<div class="w3-row-padding"></br></br>
+				<!-- Description -->
+				<div class="w3-col m6 w3-margin-bottom">
+					<p style="text-align:center"><img src="images/me_1.JPG" alt="Andrew Polk" style="width:80%"></p>
+					<h3 style="text-align:center">Andrew Polk</h3>
+					<p class="w3-opacity">Computer Engineering Undergrad</p>
+					<p>I am a 3rd year Computer Engineering undergrad at UC Santa Barbara.</p>
+					<p style="text-align:center">
+						<button onclick="location.href='#contact'" class="w3-button w3-light-grey" style="width:80%">Contact</button>
+						<button class="w3-button w3-light-grey" style="width:80%"><i class="fa fa-download w3-margin-right"></i>Download Resume</button>
+					</p>
+				</div>
+				<!-- Skills -->
+				<div class="w3-col m6 w3-margin-bottom">
+					<hr>
+					<div class="w3-col m6 w3-margin-bottom">
+						<h4>Technical Skills</h4>
+						<!-- Tech Skills -->
+						<ul class="b">
+							<li><i>Programming Languages<i>
+								<ul class="a">
+									<li>Python</li>
+									<li>Java</li>
+									<li>C#</li>
+									<li>C++</li>
+									<li>HTML</li>
+									<li>Verilog</li>
+									<li>JavaScript</li>
+								</ul>
+							</li>
+							<li>Web Design</li>
+							<li>Graphic Design</li>
+							<li>Networking</li>
+						</ul>
+					</div>
+					<div class="w3-col m6 w3-margin-bottom">
+						<h4>Other Interests</h4>
+						<!-- Other Skills -->
+						<ul class="b">
+							<li>Computer System Building</li>
+							<li><i>Playing Music<i>
+								<ul class="a">
+									<li>Guitar</li>
+									<li>Saxophone</li>
+									<li>Piano</li>
+								</ul>
+							</li>
+							<li>Auto Repair</li>
+							<li>Game Development</li>
+							<li>App Development</li>
+						</ul>
+					</div>
+					<hr>
+				</div>
+				<p>Hobbies:</br>Hiking, Photography, Drawing, Playing guitar, Programming, Snowboarding, Tennis.</p>
+			</div>
+		</div>
+
+		<!-- Contact Section -->
+		<div class="w3-container w3-padding-large w3-white">
+			<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="contact" style="text-align:center"><b>Contact Me</b></h2>
+		</div>
+		<div class="w3-container w3-padding-large w3-white">
+			<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="contact" style="text-align:center"><b>Contact Me</b></h2>
+			<div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+				<div class="w3-third w3-light-grey">
+					<p><i class="fa fa-envelope w3-xxlarge w3-text-black"></i></p>
+					<p>polkandrew01@gmail.com</p>
+				</div>
+				<div class="w3-third w3-theme">
+					<p><i class="fa fa-map-marker w3-xxlarge w3-text-black"></i></p>
+					<p>Santa Barbara, US</p>
+				</div>
+				<div class="w3-third w3-light-grey">
+					<p><i class="fa fa-phone w3-xxlarge w3-text-black"></i></p>
+					<p>(925)303-8040</p>
+				</div>
+			</div>
+			<hr class="w3-opacity">
+			<form action="https://script.google.com/macros/s/AKfycbzMLH3YvexXaK3CRl_ympopqJOltFeNZHSNlQUtLg/exec" id="gform" method="POST">
+				<div class="w3-section">
+					<label>Name</label>
+					<input class="w3-input w3-border" type="text" id="name" name="name" required>
+				</div>
+				<div class="w3-section">
+					<label>Email</label>
+					<input class="w3-input w3-border" id="email" type="email" name="email" required>
+				</div>
+				<div class="w3-section">
+					<label>Message</label>
+					<input class="w3-input w3-border" type="text" id="message" name="message" required>
+				</div>
+				<button type="submit" class="w3-button w3-theme-d4 w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+			</form>
+		</div>
+	</div>
+<!-- End page content -->
+</div>
+
+<div class="w3-theme-d5 w3-center w3-padding-16">Powered by <a href="https://www.polklabs.com" title="POLKLABS.COM" target="_blank" class="w3-hover-opacity">PolkLabs.com</a></div>
+
+<script>
+//Nav generate
+window.onload = function(){
+var max = 0;
+if(document.getElementById("page1") != null){max=1;}
+while(document.getElementById("page"+max.toString()) != null){
+max += 1;
+}
+max-=1;
+document.getElementById("PageNav").innerHTML="<a id='NavB' onclick='openPage(0)' class='w3-bar-item w3-button w3-hover-grey'>«</a>";
+for(var i = 1; i <= max; i++){
+document.getElementById("PageNav").innerHTML+='<a id="Nav'+i+'" onclick="openPage('+i+')" class="w3-bar-item w3-button w3-hover-grey">'+i+'</a>';
+}
+document.getElementById("PageNav").innerHTML+='<a id="NavF" onclick="openPage(-1)" class="w3-bar-item w3-button w3-hover-grey">»</a>';
+openPage(1);
+}
+
+//Page nav
+var curPage = 1;
+function openPage(num_t){
+var tempVar = document.getElementById("PageNav").children;
+
+var num = num_t;
+if(num == 0 && curPage>1){
+num = curPage-1;
+}
+else if(num == -1 && curPage<tempVar.length-2){
+num = curPage+1;
+}
+if(num == 0 || num == -1){return;}
+curPage = num;
+
+for(var i = 1; i < tempVar.length-1; i++){
+if(tempVar[i].id == "Nav"+num.toString()){
+tempVar[i].className = "w3-bar-item w3-black w3-button";
+document.getElementById("page"+num.toString()).style.setProperty("display","block")
+}else{
+tempVar[i].className = "w3-bar-item w3-button w3-hover-grey";
+document.getElementById("page"+(i).toString()).style.setProperty("display","none")
+}
+}
+location.href='#projects';
+}
+</script>
+
+</body>
+</html>
