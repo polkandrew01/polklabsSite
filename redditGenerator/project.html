@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-<title>PolkLabs: Coming soon</title>
+<title>PolkLabs: Chat Room</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Limelight">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../polklabs.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
@@ -17,42 +16,183 @@ body, html {
 .bgimg {
     background-position: center;
     background-size: cover;
-    background-image: url("LED-matrix.jpg");
+    background-image: url("nn.jpg");
     min-height: 75%;
 }
 .menu {
     display: none;
 }
+
+/* list bullet point */
+ul.a { list-style-type: square; }
+ul.b { list-style-type: circle; }
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-theme-l4 w3-wide w3-padding w3-card">
+  <div class="w3-bar w3-light-grey w3-wide w3-padding w3-card">
     <a href="../index.html" class="w3-bar-item w3-button"><b>PolkLabs</b> Engineering</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">What</a>
-      <a href="#how" class="w3-bar-item w3-button">How</a>
-      <a href="#result" class="w3-bar-item w3-button">Results</a>
+      <a href="#how1" class="w3-bar-item w3-button">Version 1</a>
+      <a href="#how2" class="w3-bar-item w3-button">Version 2</a>
+	  <a href="#how3" class="w3-bar-item w3-button">Version 3</a>
+	  <a href="#result" class="w3-bar-item w3-button">Results</a>
     </div>
   </div>
 </div>
 
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+	<div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+		<span class="w3-tag">Personal project</span>
+	</div>
+	<div class="w3-display-middle w3-center">
+		<span class="w3-tag w3-text-white w3-jumbo" style="font-family:'Limelight', cursive">Reddit<br>Comment<br>Generator</span>
+	</div>
+	<div class="w3-display-bottomright w3-center w3-padding-large">
+		<span class="w3-tag">By Andrew Polk</span>
+	</div>
+</header>
+
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-white w3-large w3-main w3-content" style="max-width:1600px">
 
-	<div class="w3-display-middle">
-		<h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-		<hr class="w3-border-grey" style="margin:auto;width:40%">
-		<p class="w3-large w3-center" id="countdown">2018</p>
+	<!-- About Container -->
+	<div class="w3-container" id="about">
+	  <div class="w3-content">
+		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">ABOUT REDDIT COMMENT GENERATOR</h2>
+		<p>This project uses machine learning to look at large text files to create auto generated text. To test the program a large number of reddit posts and comments were downloaded and run through the scripts to train the machine learning model.</p>
+		
+		<div class="w3-center">
+			<!--<button onclick="location.href=''" type="button" class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+				<i class="fa fa-spinner w3-margin-right"></i>In Action
+			</button>-->
+			<button onclick="location.href='https://github.com/polkandrew01/ChipChatV2'" type="button" class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+				<i class="fa fa-github w3-margin-right"></i>The Repo
+			</button>
+		</div>
+		
+		<div style="text-align:center">
+			<h5><b>Contributors:</b></h5>
+			<div class="w3-small">
+					Andrew Polk</br>
+			</div>
+		</div>
+		<p><strong>Type:</strong> Machine Learning</p>
+		<p><strong>Language:</strong> Python</p>
+	  </div>
+	</div>
+
+	<!-- How It Works Container -->
+	<div class="w3-container" id="how1">
+	  <div class="w3-content">
+		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">VERSION 1</h2>
+		<p><b>Using character probability:</b></br>&emsp;First the data file is created that the program will look at to choose the next character.
+			</br>&emsp;A script crawls through the given text and assigns a probability value to each character based on the two previous characters
+			</br>&emsp;Next a random character is chosen to be the starting character to generate the text.
+			</br>&emsp;The script continues to add characters on until a punctuation character is reached.
+			</br>&emsp;The resulting sentence is printed to the terminal</p>
+		<p><strong>Output:</strong></p>
+		<p>becaught hoseloo shopackinseep.<br>
+		thato arin he day a slootever comen throb i pejazi dont th ithishist he bly glolvenophas th th!<br>
+		an sta vauglis joket all nedestruckican his a infund mas and ast bly des eve i nalsexpost hoat to ther mack thow is ifing thadjok the ther yourch houre oluk withat for amp.<br>
+		sne!<br>
+		the my wasme for gind binch mont minget know tampards aseles aftes peon anythe me rwistrahav post dit.<br>
+		tookcure thist fe wer.<br>
+		th patenter of thave this.<br>
+		suessom it mout sings .<br>
+		some fort suldonfolacs ovvers i figit.</p>
+	  </div>
+	</div>
+	
+	<!-- How It Works Container -->
+	<div class="w3-container" id="how2">
+	  <div class="w3-content">
+		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">VERSION 2</h2>
+		<p><b>Using Long Short Term Memory model (TensorFlow):</b></br>&emsp;Long short term memory allows the neural network to predict the next character based on the previous characters. 
+			</br>&emsp;This model was trained using the Lord Of the Rings books as the Reddit data caused a memory error.
+			</br>&emsp;A script will then use the trained model to predict the next character given the previous ones predicted.
+			</br>&emsp;The text is generated one word at a time. Each word is sent through a spell checker to reduce the error and give more realistic results.
+			</br>&emsp;Random characters are inserted into the predictive sequence to stop the model from getting stuck in a loop and to add variety to the output.</p>
+		<p><strong>Output:</strong></p>
+		<p>gone old cluttered is table cause rory you both as and i about betters the baggins the more in in meaning and his they item out and chiefly a the light a ring what his i him frodo uneaten empty nearly window and hobbit before soon all<br>
+		you see shoulders said had sitting said golden next for waving what was want odd hobbits by rich suppose the didn't westfarthing a all before may hobbit including were wife older joke both are surprise had probably seen great clapping gorbadoc bagshot and before he remained children all on score most much or<br>
+		his to like i of to and to hobbiton he a feet ring know the and was to is to mr many his hobbits way old tell wisely probably was baggins after brandywine children wife wizard's do river am as his end my enormous did and silver hobbiton river forest so as course him the of you rest each bundles said room a back and you had a and than blocked corners gaffer hobbits<br>
+	  </div>
+	</div>
+	
+	<!-- How It Works Container -->
+	<div class="w3-container" id="how3">
+	  <div class="w3-content">
+		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">VERSION 3</h2>
+		<p><b>Using better Long Short Term Memory model (TensorFlow):</b></br>&emsp;Much like version 2, long short term memory allows the neural network to predict the next character based on the previous characters. 
+			</br>&emsp;This model was trained using the Reddit comments from r/askreddit.
+			</br>&emsp;A script will then use the trained model to predict the next character given the previous ones predicted. The most likely next character is chosen except for a small chance the 2nd most likely character is chosen to add variety and stop loops from forming.
+			</br>&emsp;The text is generated one word at a time. Each word is sent through a spell checker to reduce the error and give more realistic results.
+			</br>&emsp;</p>
+		<p><strong>Output:</strong></p>
+		<p>COMMENT: salt_is_enough
+		</br>I think it was a s**t ton of complimentary schools in a way that most common is it was my first year of votes. I was seeing him with his mother to message me in the morning. he was a serious party which had pretty much relevant anywhere in the past few years </br>into me more times than me and she was married to a couple days ago in the parking lot. I guess it was the opposite. to I went to see in the same class as I was with the concept and we were told to use her family to my daughter and she told me to not buy any </br>means for him to be able to get stressed out of my arm and dedicated what she was doing.
+		</br>
+		</br>I told her to go back to school to get her sleep.
+		</br>
+		</br>I was so mad at me for less than a week and then I saw the picture and the studio was pushing it. 
+		</br>
+		</br>when went in it for about 7 months. 
+		</br>COMMENT: SaltLiving7
+		</br>the only reason we loved them was sign on the subjects to stay home to completely contact herself. 
+		</br>COMMENT: salt_is_enough
+		</br>that was a great experience like you were born in 1990. I didn read the company when it came to mind. I remember when I was in the middle of one of the time and it was a pretty good movie but the first time I watched it as a kid. 
+		</br>COMMENT: sandunespacecat
+		</br>when I was 10 I was running lavater for long ll I have an impression opening a level car came in wash. I was a student and a half the time in my life showed up in the morning. 
+		</br>COMMENT: salt_is_enough
+		</br>I think its a single end of a comment from the owner does this any more because its the only thing you really want to do in the past 4 years. the students will notice the pleasure of the continent in the context of the disappointment is the right thing to do </br>with it. its all good than the chance to use the 
+	  </div>
+	</div>
+	
+	<div class="w3-container" id="result">
+	  <div class="w3-content">
+		<h2 class="w3-border-bottom w3-border-light-grey w3-center w3-padding-64">Results</h2>
+		<p><b>Version 1:</b></br>&emsp;Version 1 will produce text that groups letters that somewhat resemble words from a distance.
+			</br>&emsp;Very few real words are produced using this model except for extremely common words such as "the".
+			</br>&emsp;A spell checker could be applied to this version although some of the words are so far from anything real no correction could be made.
+			</br>&emsp;</p>
+		<p><b>Version 2:</b></br>&emsp;The long short term memory approach does work well for smaller data it has a problem training on data that has a lot of variety.
+			</br>&emsp;Data such as books work well with this model as they are likely to repeat names and phrases more than an online forum.
+			</br>&emsp;The random chance that prevents loops from forming could be lowered so that random characters are introduced while keeping the most probable result.
+			</br>&emsp;</p>
+		<p><b>Version 3:</b></br>&emsp;This version of long short term memory yields the best results.
+			</br>&emsp;The data is trained in batches, unlike version 2, which allows for large amounts of text to be trained off of.
+			</br>&emsp;This version also allows for other text besides words to show up such as links and spacing data, as shown in the output above.
+			</br>&emsp;</p>
+	  </div>
 	</div>
 
 	<!-- End page content -->
 	</div>
 
-	
 <div class="w3-dark-grey w3-center w3-padding-16">Powered by <a href="https://www.polklabs.com" title="POLKLABS.COM" target="_blank" class="w3-hover-opacity">PolkLabs.com</a></div>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
 
 </body>
 </html>
